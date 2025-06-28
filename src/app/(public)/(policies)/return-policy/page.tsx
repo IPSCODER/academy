@@ -1,11 +1,52 @@
-// app/return-policy/page.tsx
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Return & Refund Policy | The Code Academy",
+  description:
+    "Understand the refund and return policies of The Code Academy for courses, digital products, and project demos.",
+  keywords: [
+    "return policy",
+    "refund policy",
+    "The Code Academy return terms",
+    "online course refund",
+    "digital product return",
+    "eLearning refund policy",
+    "project demo refund",
+  ],
+  openGraph: {
+    title: "Return & Refund Policy | The Code Academy",
+    description:
+      "Clear explanation of our refund rules for courses, digital products, and live project demos.",
+    url: "https://thecodeacademy.in/return-policy",
+    siteName: "The Code Academy",
+    images: [
+      {
+        url: "https://thecodeacademy.in/og-return.jpg", // ✅ Update with your actual image path
+        width: 1200,
+        height: 630,
+        alt: "The Code Academy Return and Refund Policy",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Return & Refund Policy | The Code Academy",
+    description:
+      "Find out how The Code Academy handles returns and refunds for courses and digital products.",
+    images: ["https://thecodeacademy.in/og-return.jpg"],
+  },
+  metadataBase: new URL("https://thecodeacademy.in"),
+};
+
 export default function ReturnPolicy() {
   return (
     <div className="min-h-screen bg-white px-6 py-12 max-w-4xl mx-auto">
       <h1 className="text-4xl font-bold text-blue-700 mb-6">Return & Refund Policy</h1>
 
       <p className="text-gray-700 mb-4">
-        At <strong>Your Coaching Institute</strong>, we are committed to providing high-quality
+        At <strong>The Code Academy</strong>, we are committed to providing high-quality
         education and training. However, due to the nature of digital products and services,
         our refund policy is outlined below to ensure transparency.
       </p>
@@ -39,8 +80,8 @@ export default function ReturnPolicy() {
       <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-2">4. How to Request a Refund</h2>
       <p className="text-gray-700 mb-4">
         To request a refund, contact us at{" "}
-        <a href="mailto:support@yourinstitute.com" className="text-blue-600 underline">
-          support@yourinstitute.com
+        <a href="mailto:support@thecodeacademy.in" className="text-blue-600 underline">
+          support@thecodeacademy.in
         </a>{" "}
         within the applicable window. Include your full name, payment details, and reason
         for the request.

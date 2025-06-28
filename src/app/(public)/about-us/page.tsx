@@ -1,4 +1,46 @@
-import Image from 'next/image';
+import type { Metadata } from "next";
+import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About Us | The Code Academy",
+  description:
+    "Learn about The Code Academy, our mission, teaching approach, and the passionate team behind India’s fastest-growing coding institute.",
+  keywords: [
+    "About The Code Academy",
+    "Coding classes India",
+    "The Code Academy team",
+    "Best coding institute",
+    "Programming mentors",
+    "Web development teachers",
+    "Next.js training",
+    "Coding school India",
+  ],
+  openGraph: {
+    title: "About Us | The Code Academy",
+    description:
+      "Get to know the team, values, and mission behind The Code Academy. We're dedicated to helping you succeed in tech.",
+    url: "https://thecodeacademy.in/about-us",
+    siteName: "The Code Academy",
+    images: [
+      {
+        url: "https://thecodeacademy.in/og-about.jpg", // ✅ Replace with a relevant team or company image
+        width: 1200,
+        height: 630,
+        alt: "The Code Academy - About Us",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | The Code Academy",
+    description:
+      "Explore The Code Academy’s mission and meet the team behind India’s fastest-growing coding platform.",
+    images: ["https://thecodeacademy.in/og-about.jpg"], // ✅ Same image as OG, or a Twitter-specific one
+  },
+  metadataBase: new URL("https://thecodeacademy.in"),
+};
 
 export default function AboutPage() {
   return (

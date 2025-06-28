@@ -1,11 +1,54 @@
-// app/privacy-policy/page.tsx
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | The Code Academy",
+  description:
+    "Learn how The Code Academy collects, uses, stores, and protects your personal information. We value your privacy and ensure transparency.",
+  keywords: [
+    "Privacy Policy",
+    "student data protection",
+    "data collection",
+    "The Code Academy privacy",
+    "how we use data",
+    "cookies usage",
+    "third-party sharing",
+    "student account safety",
+    "Razorpay Stripe data policy",
+  ],
+  openGraph: {
+    title: "Privacy Policy | The Code Academy",
+    description:
+      "The Code Academy outlines its commitment to protecting your privacy, handling student and payment data responsibly, and complying with data laws.",
+    url: "https://thecodeacademy.in/privacy-policy",
+    siteName: "The Code Academy",
+    images: [
+      {
+        url: "https://thecodeacademy.in/og-privacy.jpg", // ✅ Replace with your own hosted image
+        width: 1200,
+        height: 630,
+        alt: "The Code Academy Privacy Policy",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | The Code Academy",
+    description:
+      "We explain our practices for collecting, storing, and using student data at The Code Academy, including your rights and cookie usage.",
+    images: ["https://thecodeacademy.in/og-privacy.jpg"],
+  },
+  metadataBase: new URL("https://thecodeacademy.in"),
+};
+
 export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white px-6 py-12 max-w-4xl mx-auto">
       <h1 className="text-4xl font-bold text-blue-700 mb-6">Privacy Policy</h1>
 
       <p className="text-gray-700 mb-4">
-        At <strong>Your Coaching Institute</strong>, we respect your privacy and are committed to
+        At <strong>The Code Academy</strong>, we respect your privacy and are committed to
         protecting the personal information you share with us. This Privacy Policy explains how we
         collect, use, and safeguard your data.
       </p>
@@ -57,7 +100,7 @@ export default function PrivacyPolicy() {
         in your browser settings, though it may affect site functionality.
       </p>
 
-      <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-2">7. Childrens Privacy</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-2">7. Children’s Privacy</h2>
       <p className="text-gray-700 mb-4">
         Our services are not intended for children under 13. We do not knowingly collect data from
         minors without parental consent.
@@ -72,8 +115,8 @@ export default function PrivacyPolicy() {
       <h2 className="text-2xl font-semibold text-gray-800 mt-6 mb-2">9. Contact Us</h2>
       <p className="text-gray-700 mb-4">
         If you have any questions or concerns about our Privacy Policy, please contact us at{" "}
-        <a href="mailto:support@yourinstitute.com" className="text-blue-600 underline">
-          support@yourinstitute.com
+        <a href="mailto:support@thecodeacademy.in" className="text-blue-600 underline">
+          support@thecodeacademy.in
         </a>
         .
       </p>

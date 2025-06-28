@@ -1,4 +1,47 @@
-// app/terms-and-conditions/page.tsx
+import type { Metadata } from "next";
+import React from "react";
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions | Your Coaching Institute",
+  description:
+    "Review the terms and conditions for using courses, services, and content offered by Your Coaching Institute. Understand user responsibilities, payments, IP, and legal compliance.",
+  keywords: [
+    "Terms and Conditions",
+    "Coaching Institute policies",
+    "course access terms",
+    "intellectual property terms",
+    "user responsibility",
+    "payment terms",
+    "refund eligibility",
+    "digital product rules",
+  ],
+  openGraph: {
+    title: "Terms & Conditions | Your Coaching Institute",
+    description:
+      "These terms govern your access to courses and services from Your Coaching Institute. Please read before enrolling.",
+    url: "https://yourdomain.com/terms-and-conditions", // Replace with your real domain
+    siteName: "Your Coaching Institute",
+    images: [
+      {
+        url: "https://yourdomain.com/og-terms.jpg", // Replace with your actual OG image
+        width: 1200,
+        height: 630,
+        alt: "Terms and Conditions",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms & Conditions | Your Coaching Institute",
+    description:
+      "Understand the terms governing your use of the coaching platform and its services.",
+    images: ["https://yourdomain.com/og-terms.jpg"], // Replace if needed
+  },
+  metadataBase: new URL("https://yourdomain.com"),
+};
+
 export default function TermsAndConditions() {
   return (
     <div className="min-h-screen bg-white px-6 py-12 max-w-4xl mx-auto">

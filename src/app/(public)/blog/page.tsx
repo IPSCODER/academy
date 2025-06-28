@@ -1,5 +1,49 @@
-// app/blogs/page.tsx
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Tech Blogs | The Code Academy",
+  description:
+    "Explore tech blogs for IT students and aspiring developers. Learn about web development, DevOps, Git, interviews, and trending technologies.",
+  keywords: [
+    "Tech blogs",
+    "Coding articles",
+    "Web development blog",
+    "Frontend vs backend",
+    "Git and GitHub guide",
+    "DevOps tools",
+    "Interview questions for developers",
+    "API explained",
+    "Kotlin tutorial",
+    "AWS deployment",
+    "The Code Academy blogs",
+  ],
+  openGraph: {
+    title: "Tech Blogs | The Code Academy",
+    description:
+      "Discover insightful articles on web development, version control, DevOps, testing, and more — tailored for IT students.",
+    url: "https://thecodeacademy.in/blogs",
+    siteName: "The Code Academy",
+    images: [
+      {
+        url: "https://thecodeacademy.in/og-blogs.jpg", // ✅ Replace with an actual OG image
+        width: 1200,
+        height: 630,
+        alt: "Tech Blogs - The Code Academy",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tech Blogs | The Code Academy",
+    description:
+      "Read curated blogs on software careers, coding tutorials, and tools every developer must know.",
+    images: ["https://thecodeacademy.in/og-blogs.jpg"],
+  },
+  metadataBase: new URL("https://thecodeacademy.in"),
+};
 
 const blogs = [
   {

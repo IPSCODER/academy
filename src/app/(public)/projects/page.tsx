@@ -1,5 +1,48 @@
-// app/projects/page.tsx
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Industrial Projects | The Code Academy",
+  description:
+    "Explore real-world industrial and academic projects built by students of The Code Academy — from full stack apps to DevOps pipelines and automation tools.",
+  keywords: [
+    "Student projects",
+    "Industrial projects",
+    "Full stack web apps",
+    "DevOps projects",
+    "AI chatbot app",
+    "AWS pipeline project",
+    "Android notes app",
+    "Automation testing suite",
+    "Retail billing software",
+    "thecodeacademy.in projects",
+  ],
+  openGraph: {
+    title: "Industrial Projects | The Code Academy",
+    description:
+      "Browse live demos of real projects built using modern stacks like React, Next.js, AWS, Docker, OpenAI, Electron.js, and more.",
+    url: "https://thecodeacademy.in/projects",
+    siteName: "The Code Academy",
+    images: [
+      {
+        url: "https://thecodeacademy.in/og-projects.jpg", // ✅ Replace with your actual OG image
+        width: 1200,
+        height: 630,
+        alt: "Projects by The Code Academy Students",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial Projects | The Code Academy",
+    description:
+      "See live demos of student-built applications: full stack, DevOps, Android, automation, and more.",
+    images: ["https://thecodeacademy.in/og-projects.jpg"],
+  },
+  metadataBase: new URL("https://thecodeacademy.in"),
+};
 
 const projects = [
   {
