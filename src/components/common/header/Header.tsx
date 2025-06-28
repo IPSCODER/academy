@@ -16,7 +16,8 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-gray-900 text-gray-100 shadow-md">
+<>
+<header className="bg-gray-900 text-gray-100 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         
         {/* Logo / Brand */}
@@ -57,5 +58,6 @@ export default function Header() {
         </div>
       )}
     </header>
+</>
   );
 }

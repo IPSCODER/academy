@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/common/footer/Footer";
 import Header from "@/components/common/header/Header";
-import SmoothScrollProvider from "@/components/layout/scroll/SmoothScrollBehaviour";
+import WhatsAppButton from "@/components/layout/WhatsApp/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,11 +68,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SmoothScrollProvider>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
-        </SmoothScrollProvider>
+    <WhatsAppButton/>
+
       </body>
     </html>
   );
