@@ -1,7 +1,7 @@
-// components/SmoothScrollProvider.tsx
 'use client';
 
 import { useEffect, useRef } from 'react';
+import type LocomotiveScrollType from 'locomotive-scroll';
 
 interface Props {
   children: React.ReactNode;
@@ -9,24 +9,30 @@ interface Props {
 
 export default function SmoothScrollProvider({ children }: Props) {
   const scrollRef = useRef<HTMLDivElement | null>(null);
+  const scrollInstance = useRef<LocomotiveScrollType | null>(null);
 
   useEffect(() => {
-    // Dynamically import locomotive-scroll on client only
-    let scroll: any;
+    let mounted = true;
 
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
 
-      scroll = new LocomotiveScroll({
-        el: scrollRef.current!,
-        smooth: true,
-        lerp: 0.08,
-        multiplier: 1,
-      });
+      if (scrollRef.current && mounted) {
+        scrollInstance.current = new LocomotiveScroll({
+          el: scrollRef.current,
+          smooth: true,
+          lerp: 0.08,
+          multiplier: 1,
+        });
+      }
     })();
 
     return () => {
-      if (scroll) scroll.destroy();
+      mounted = false;
+      if (scrollInstance.current) {
+        scrollInstance.current.destroy();
+        scrollInstance.current = null;
+      }
     };
   }, []);
 
