@@ -1,79 +1,42 @@
-import type { Metadata } from "next";
-import Image from "next/image";
+'use client';
 
-export const metadata: Metadata = {
-  title: "About Us | The Code Academy",
-  description:
-    "Learn about The Code Academy, our mission, teaching approach, and the passionate team behind India’s fastest-growing coding institute.",
-  keywords: [
-    "About The Code Academy",
-    "Coding classes India",
-    "The Code Academy team",
-    "Best coding institute",
-    "Programming mentors",
-    "Web development teachers",
-    "Next.js training",
-    "Coding school India",
-  ],
-  openGraph: {
-    title: "About Us | The Code Academy",
-    description:
-      "Get to know the team, values, and mission behind The Code Academy. We're dedicated to helping you succeed in tech.",
-    url: "https://thecodeacademy.in/about-us",
-    siteName: "The Code Academy",
-    images: [
-      {
-        url: "https://thecodeacademy.in/og-about.jpg", // ✅ Replace with a relevant team or company image
-        width: 1200,
-        height: 630,
-        alt: "The Code Academy - About Us",
-      },
-    ],
-    locale: "en_IN",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Us | The Code Academy",
-    description:
-      "Explore The Code Academy’s mission and meet the team behind India’s fastest-growing coding platform.",
-    images: ["https://thecodeacademy.in/og-about.jpg"], // ✅ Same image as OG, or a Twitter-specific one
-  },
-  metadataBase: new URL("https://thecodeacademy.in"),
-};
+import Image from 'next/image';
+
+
 
 export default function AboutPage() {
   return (
     <main className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto space-y-16">
-
-        {/* Intro */}
+      <div className="max-w-7xl mx-auto space-y-24">
+        {/* Hero */}
         <section className="text-center">
-          <h1 className="text-4xl font-bold">About Us</h1>
-          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Welcome to <span className="text-indigo-600 font-semibold">The Code Academy</span> — a place where academic excellence meets personal mentoring. We empower students to succeed in competitive exams and life.
+          <h1 className="text-5xl font-extrabold tracking-tight">
+            About <span className="text-indigo-600">The Code Academy</span>
+          </h1>
+          <p className="mt-6 text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            A place where <strong>academic excellence</strong> meets <strong>personal mentorship</strong>. Were empowering students across India to achieve their dreams in tech.
           </p>
         </section>
 
         {/* Mission & Vision */}
-        <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h2 className="text-2xl font-semibold text-indigo-600 mb-2">Our Mission</h2>
-            <p className="text-gray-700 dark:text-gray-300">
-              To provide high-quality, result-oriented education to students through expert faculty, innovative teaching methods, and a supportive learning environment.
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md hover:shadow-lg transition">
+            <h2 className="text-2xl font-semibold text-indigo-600 mb-4">🎯 Our Mission</h2>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              To provide high-quality, result-oriented education through expert faculty, innovative methods, and a supportive learning environment.
             </p>
           </div>
-          <div>
-            <h2 className="text-2xl font-semibold text-indigo-600 mb-2">Our Vision</h2>
-            <p className="text-gray-700 dark:text-gray-300">
-              To become India’s most trusted coaching institute, nurturing the academic and personal growth of every student.
+          <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 shadow-md hover:shadow-lg transition">
+            <h2 className="text-2xl font-semibold text-indigo-600 mb-4">🌟 Our Vision</h2>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              To become India’s most trusted coding institute, nurturing the personal and academic growth of every student.
             </p>
           </div>
         </section>
 
-        {/* Highlights / Values */}
+        {/* Highlights */}
         <section className="text-center">
-          <h2 className="text-2xl font-semibold mb-6">Why Students Choose Us</h2>
+          <h2 className="text-3xl font-bold mb-6">🚀 Why Students Choose Us</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {[
               'Expert Faculty',
@@ -83,31 +46,31 @@ export default function AboutPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-md transition"
+                className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm hover:shadow-md transition text-center border border-gray-200 dark:border-gray-700"
               >
-                <p className="font-medium text-indigo-600">{item}</p>
+                <p className="text-lg font-medium text-indigo-600">{item}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Founder Section */}
-        <section className="flex flex-col md:flex-row items-center gap-8">
-          <Image
-            src="/profile.png"
-            alt="Founder"
-            width={300}
-            height={300}
-            className="rounded-lg object-cover"
-          />
-          <div>
-            <h3 className="text-xl font-bold mb-2">Mr. Pravin Sawant</h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              Founder & Academic Director
+        {/* Founder */}
+        <section className="flex flex-col-reverse lg:flex-row items-center gap-12">
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold mb-2">👨‍🏫 Mr. Pravin Sawant</h3>
+            <p className="text-gray-500 dark:text-gray-400 font-medium mb-4">Founder & Academic Director</p>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              With over 4 years of experience in tech education, Mr. Sawant is committed to building a future where quality education is accessible to all. His focus on clarity, mentorship, and career-building sets the tone for The Code Academy.
             </p>
-            <p className="mt-4 text-gray-700 dark:text-gray-300 max-w-2xl">
-              With over 4 years of experience in the education field, Mr. Sawant is dedicated to providing quality learning. His vision is to make quality education accessible to all aspiring students across India.
-            </p>
+          </div>
+          <div className="flex-1 flex justify-center">
+            <Image
+              src="/profile.png"
+              alt="Founder"
+              width={300}
+              height={300}
+              className="rounded-2xl shadow-lg object-cover"
+            />
           </div>
         </section>
       </div>
